@@ -1,0 +1,15 @@
+{
+  "title": "FamBoo",
+  "tagline": "The book we need",
+  "auto_landing": false,
+  "breadcrumbs": true,
+
+  "html": {
+    "themes_directory": "<base_url>../themes",
+    "theme": "famboo", 
+    "links": {
+      "Markdown": "https://guides.github.com/features/mastering-markdown/",
+      "Daux.io": "http://daux.io/Getting_Started.html"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+    "favicon": "<theme_url>favicon.png",
+    "js": [
+        "<theme_url>../daux/js/daux.min.js",
+        "<theme_url>js/jquery-3.6.0.min.js",
+        "<theme_url>js/imgzoom.js",
+        "<theme_url>js/transform-lists-to-gallerys.js",
+        "<theme_url>js/theme-it.js"
+    ],
+    "css": [
+        "<theme_url>../daux/css/theme-blue.min.css",
+        "<theme_url>css/style.css"
+    ]
+}
