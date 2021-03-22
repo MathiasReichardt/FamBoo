@@ -65,6 +65,14 @@ img.imgzoom-loading {
     margin: 1em auto;
 }
 
+.author {
+    float: left;
+    font-size: 10px;
+    font-weight: bolder;
+    color: grey;
+    margin: 0 0.5em;
+}
+
 .keywords-container {
     float: left;
     font-size: 10px;

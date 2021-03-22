@@ -7,6 +7,17 @@ function onPageLoad() {
     $('img').on('click', imgzoom);
 }
 function addMetaData() {
+    addAuthor();
+    addKeywords();
+}
+function addAuthor() {
+    let author = document.querySelector('meta[name="author"]');
+    if (!author || !author.content)
+        return;
+    var content = $("div.Page__header");
+    content.append(`<span class="author">${author.content}</span>`);
+}
+function addKeywords() {
     let keywords = document.querySelector('meta[name="keywords"]');
     if (!keywords || !keywords.content)
         return;
