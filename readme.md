@@ -67,14 +67,14 @@ Run the following command in the folder containing your `doc` folder to generate
 
 `docker run --rm -it -w /build -v ${PWD}:/build  daux/daux.io daux generate`
 
-## Used libs
+### Used libs
 
 - [imgzoom](https://github.com/arp242/imgzoom) modified
   - modified to fix behavior
   - WIP add next previous
 - [jQuery](https://jquery.com/)
 
-## Todo
+### Todo
 - Gallery bug: when selecting a small image first the size is not recalculated on next or prev
 - Gallery bug: clicking on a image behind while large view is shown breaks the zoom in
 - make keywords and author searchable
