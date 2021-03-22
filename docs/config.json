@@ -6,7 +6,7 @@
 
   "html": {
     "themes_directory": "<base_url>../themes",
-    "theme": "famboo", 
+    "theme": "famboo-blue", 
     "links": {
       "Markdown": "https://guides.github.com/features/mastering-markdown/",
       "Daux.io": "http://daux.io/Getting_Started.html"

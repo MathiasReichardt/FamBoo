@@ -7,8 +7,30 @@
         "<theme_url>js/transform-lists-to-gallerys.js",
         "<theme_url>js/theme-it.js"
     ],
-    "css": [
-        "<theme_url>../daux/css/theme-blue.min.css",
-        "<theme_url>css/style.css"
-    ]
+    "variants": {
+        "blue": {
+            "css": [
+                "<theme_url>../daux/css/theme-blue.min.css",
+                "<theme_url>css/famboo.css"
+            ]
+        },
+        "green": {
+            "css": [
+                "<theme_url>../daux/css/theme-green.min.css",
+                "<theme_url>css/famboo.css"
+            ]
+        },
+        "navy": {
+            "css": [
+                "<theme_url>../daux/css/theme-navy.min.css",
+                "<theme_url>css/famboo.css"
+            ]
+        },
+        "red": {
+            "css": [
+                "<theme_url>../daux/css/theme-red.min.css",
+                "<theme_url>css/famboo.css"
+            ]
+        }
+    }
 }

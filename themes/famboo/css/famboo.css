@@ -47,7 +47,7 @@ img.imgzoom-loading {
 
 .imgzoom-large {
     cursor: pointer;
-    box-shadow: 0 0 28px rgba(130, 190, 205, 0.8);
+    box-shadow: 0 0 28px rgba(0, 0, 0, 0.8);
     transition: all .4s;
 }
 
