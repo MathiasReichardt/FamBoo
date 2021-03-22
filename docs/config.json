@@ -5,7 +5,6 @@
   "breadcrumbs": true,
 
   "html": {
-    "themes_directory": "<base_url>../themes",
     "theme": "famboo-blue", 
     "links": {
       "Markdown": "https://guides.github.com/features/mastering-markdown/",
