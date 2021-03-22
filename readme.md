@@ -57,4 +57,3 @@ Run the following command in the folder containing your `doc` folder to generate
 - Gallery bug: clicking on a image behind while large view is shown breaks the zoom in
 - make keywords and author searchable
 - add date from front matter to pages
-- build docker image with theme inside (and use path to style and js of official theme not a copy)
