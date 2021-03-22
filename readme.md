@@ -1,6 +1,6 @@
 # FamBoo
 
-FamBoo (**Fam**iliy**Boo**k) is a theme for [Daux.io](http://daux.io/Getting_Started.html). It is based on the default Daux blue theme with some additions.
+FamBoo (**Fam**iliy**Boo**k) is a theme for [Daux.io](http://daux.io/Getting_Started.html). It is based on the default Daux themes with some additions.
 
 ## Why?
 
@@ -31,10 +31,34 @@ This theme was built to produce a easy to maintain and use personal wiki and fam
   - `.mpg`
   - `.mpeg`
 
-## Installation
+## Build
+
+Cofigure the theme in the `config.json` of your `docs` folder:
+
+```json
+..
+"html": {
+    ..
+    "theme": "famboo-blue", 
+    ..
+  }
+
+```
+
+### Manual
 
 See [Setting the theme for your documentation](http://daux.io/For_Developers/Creating_a_Theme.html).
-Basically place the `themes/FamBoo` folders next to the doc folder of your content and set the path in `config.json` in your content folder.
+Basically place the `themes/` folder next to the doc folder of your content and set the path in `config.json` in your content folder.
+
+### Build with docker container
+
+This container contains the theme.
+
+[DockerHub - reimat/daux-famboo](https://hub.docker.com/r/reimat/daux-famboo)
+
+Just generated your site by running the docker command next to you `docs` folder:
+
+`docker run --rm -it -w /build -v ${PWD}:/build reimat/daux-famboo daux generate`
 
 ## Execute Daux
 
