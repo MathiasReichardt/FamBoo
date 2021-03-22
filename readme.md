@@ -53,11 +53,8 @@ Run the following command in the folder containing your `doc` folder to generate
 - [jQuery](https://jquery.com/)
 
 ## Todo
-
-- redesign folder structure, we now have TS and need to move scr and demo doc
 - Gallery bug: when selecting a small image first the size is not recalculated on next or prev
 - Gallery bug: clicking on a image behind while large view is shown breaks the zoom in
 - make keywords and author searchable
 - add date from front matter to pages
 - build docker image with theme inside (and use path to style and js of official theme not a copy)
-- make it work with all theme variants
