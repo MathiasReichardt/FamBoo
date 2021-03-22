@@ -58,14 +58,14 @@ Just generated your site by running the docker command next to you `docs` folder
 
 `docker run --rm -it -w /build -v ${PWD}:/build reimat/daux-famboo daux generate`
 
-## Execute Daux
+## Development
 
 Official Docker container which is used during development:
 [Docker Hub: daux/daux.io](https://hub.docker.com/r/daux/daux.io)
 
 Run the following command in the folder containing your `doc` folder to generate the static site:
 
-`docker run --rm -it -w /build -p 8085:8085 -v ${PWD}:/build  daux/daux.io daux generate`
+`docker run --rm -it -w /build -v ${PWD}:/build  daux/daux.io daux generate`
 
 ## Used libs
 
