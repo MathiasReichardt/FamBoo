@@ -36,11 +36,11 @@ This theme was built to produce a easy to maintain and use personal wiki and fam
 Cofigure the theme in the `config.json` of your `docs` folder:
 
 ```json
-..
-"html": {
-    "theme": "famboo-blue", 
+{
+  "html": {
+      "theme": "famboo-blue", 
   }
-
+}
 ```
 
 ### Manual
