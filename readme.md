@@ -38,9 +38,7 @@ Cofigure the theme in the `config.json` of your `docs` folder:
 ```json
 ..
 "html": {
-    ..
     "theme": "famboo-blue", 
-    ..
   }
 
 ```
