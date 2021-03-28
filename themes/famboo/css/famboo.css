@@ -17,18 +17,18 @@
 }
 
 .gallery-button {
-    background: white;
-    opacity: 0.2;
+    background: transparent;
+    color: grey;
+    opacity: 1.0;
     border-radius: 50%;
 }
 
 .gallery-button:hover:not(:disabled) {
-    opacity: 0.7;
-    background: lightgray;
+    background: whitesmoke;
 }
 
 .arrow {
-    fill: #333;
+    fill: grey;
 }
 
 .s-content img:not(figure>img) {
