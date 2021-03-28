@@ -5,6 +5,8 @@ date: 13th März 2021
 
 # Welcome to the playground for the FamBoo theme
 
+[FamBoo - GitHub](https://github.com/MathiasReichardt/FamBoo)
+
 Based on Daux theme blue with some additions:
 
 - images are reduced in size but have zoom on click
