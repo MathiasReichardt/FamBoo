@@ -2,4 +2,3 @@ static/
 .vscode/
 node_modules/
 *.js.map
-publish.ps1
