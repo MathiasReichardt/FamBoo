@@ -77,7 +77,12 @@ Run the following command in the folder containing your `doc` folder to generate
 - [jQuery](https://jquery.com/)
 
 ### Todo
-- Gallery bug: when selecting a small image first the size is not recalculated on next or prev
-- Gallery bug: clicking on a image behind while large view is shown breaks the zoom in
+
 - make keywords and author searchable
 - add date from front matter to pages
+
+#### Gallery
+
+- Bug: when selecting a small image first the size is not recalculated on next or prev
+- Bug: clicking on a image behind while large view is shown breaks the zoom in
+- Bug: Image size is not maximized on mobile after 1st image
