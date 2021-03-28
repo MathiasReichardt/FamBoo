@@ -2,6 +2,8 @@
 
 FamBoo (**Fam**iliy**Boo**k) is a theme for [Daux.io](http://daux.io/Getting_Started.html). It is based on the default Daux themes with some additions.
 
+[Demo](https://mathiasreichardt.github.io/FamBoo-Demo/Welcome.html)
+
 ## Why?
 
 This theme was built to produce a easy to maintain and use personal wiki and family blog. 
