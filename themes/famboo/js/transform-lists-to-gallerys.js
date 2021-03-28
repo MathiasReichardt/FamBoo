@@ -22,8 +22,12 @@ function ExtractListsToTransform(ContentRootSelector, listType) {
     return galleryLists;
 }
 function IsFirstChildAorIMG(element) {
-    return element.firstElementChild
-        && element.firstElementChild.tagName == 'A' || element.firstElementChild.tagName == 'IMG';
+    if (element === null
+        || element.firstElementChild === null
+        || element.firstElementChild.tagName === null) {
+        return false;
+    }
+    return element.firstElementChild.tagName == 'A' || element.firstElementChild.tagName == 'IMG';
 }
 function HasTextContent(str) {
     return !str || str.match(/^ *$/) !== null;

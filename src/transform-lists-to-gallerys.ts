@@ -28,15 +28,20 @@ function ExtractListsToTransform(ContentRootSelector: string, listType: string):
 }
 
 function IsFirstChildAorIMG(element: Element) {
-    return element.firstElementChild
-        && element.firstElementChild.tagName == 'A' || element.firstElementChild.tagName == 'IMG'
+    if (element === null
+        || element.firstElementChild === null
+        || element.firstElementChild.tagName === null) {
+        return false;
+    }
+
+    return element.firstElementChild.tagName == 'A' || element.firstElementChild.tagName == 'IMG'
 }
 
 function HasTextContent(str: string) {
     return !str || str.match(/^ *$/) !== null;
 }
 
-function ReplaceListWithGallery(galleryToCreate:InfoForGallery, config: ExtractGalleryConfig) {
+function ReplaceListWithGallery(galleryToCreate: InfoForGallery, config: ExtractGalleryConfig) {
     let newGalleryRoot = document.createElement("div") as HTMLDivElement;
     newGalleryRoot.classList.add(config.GeneratedGalleryRootClasses);
 
@@ -90,13 +95,13 @@ function MapListElementsToGalleryModel(extractedLists: Element[]): ExtractedInfo
 
         for (const listItem of list.children) {
             var imgOrLink = listItem.firstElementChild;
-            
-            
+
+
             if (imgOrLink.tagName === "IMG") {
                 let img = imgOrLink as HTMLImageElement;
-                infoForGallery.Images.push( {
-                    src : img.src,
-                    caption : img.alt ? img.alt : null
+                infoForGallery.Images.push({
+                    src: img.src,
+                    caption: img.alt ? img.alt : null
                 });
                 continue;
             }
@@ -104,8 +109,8 @@ function MapListElementsToGalleryModel(extractedLists: Element[]): ExtractedInfo
             if (imgOrLink.tagName === "A") {
                 let a = imgOrLink as HTMLAnchorElement;
                 infoForGallery.Images.push({
-                    src : a.href,
-                    caption : null
+                    src: a.href,
+                    caption: null
                 });
                 continue;
             }
