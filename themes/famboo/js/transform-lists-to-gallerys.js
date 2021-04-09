@@ -9,7 +9,7 @@ function ExtractListsToTransform(ContentRootSelector, listType) {
     for (let potentialImageList of potentialImageLists) {
         let allItemsAreImageLinks = true;
         for (let child of potentialImageList.children) {
-            if (HasTextContent(child.textContent) || !IsFirstChildAorIMG(child)
+            if (HasTextContent(child.textContent) || !IsFirstChildIMG(child)
             //&& (!child.firstElementChild.firstChild || (child.firstElementChild.firstChild && child.firstElementChild.firstChild.tagName == 'IMG'))
             ) {
                 allItemsAreImageLinks = false;
@@ -21,13 +21,13 @@ function ExtractListsToTransform(ContentRootSelector, listType) {
     }
     return galleryLists;
 }
-function IsFirstChildAorIMG(element) {
+function IsFirstChildIMG(element) {
     if (element === null
         || element.firstElementChild === null
         || element.firstElementChild.tagName === null) {
         return false;
     }
-    return element.firstElementChild.tagName == 'A' || element.firstElementChild.tagName == 'IMG';
+    return element.firstElementChild.tagName == 'IMG';
 }
 function HasTextContent(str) {
     return !str || str.match(/^ *$/) !== null;
@@ -77,22 +77,13 @@ function MapListElementsToGalleryModel(extractedLists) {
         let infoForGallery = new InfoForGallery;
         infoForGallery.ListRootElement = list;
         for (const listItem of list.children) {
-            var imgOrLink = listItem.firstElementChild;
-            if (imgOrLink.tagName === "IMG") {
-                let img = imgOrLink;
+            var imgLink = listItem.firstElementChild;
+            if (imgLink.tagName === "IMG") {
+                let img = imgLink;
                 infoForGallery.Images.push({
                     src: img.src,
                     caption: img.alt ? img.alt : null
                 });
-                continue;
-            }
-            if (imgOrLink.tagName === "A") {
-                let a = imgOrLink;
-                infoForGallery.Images.push({
-                    src: a.href,
-                    caption: null
-                });
-                continue;
             }
         }
         extractedInfoForGallerys.Gallerys.push(infoForGallery);

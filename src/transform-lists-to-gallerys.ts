@@ -12,7 +12,7 @@ function ExtractListsToTransform(ContentRootSelector: string, listType: string):
         let allItemsAreImageLinks = true;
 
         for (let child of potentialImageList.children) {
-            if (HasTextContent(child.textContent) || !IsFirstChildAorIMG(child)
+            if (HasTextContent(child.textContent) || !IsFirstChildIMG(child)
                 //&& (!child.firstElementChild.firstChild || (child.firstElementChild.firstChild && child.firstElementChild.firstChild.tagName == 'IMG'))
             ) {
                 allItemsAreImageLinks = false;
@@ -27,14 +27,14 @@ function ExtractListsToTransform(ContentRootSelector: string, listType: string):
     return galleryLists;
 }
 
-function IsFirstChildAorIMG(element: Element) {
+function IsFirstChildIMG(element: Element) {
     if (element === null
         || element.firstElementChild === null
         || element.firstElementChild.tagName === null) {
         return false;
     }
 
-    return element.firstElementChild.tagName == 'A' || element.firstElementChild.tagName == 'IMG'
+    return  element.firstElementChild.tagName == 'IMG'
 }
 
 function HasTextContent(str: string) {
@@ -94,25 +94,14 @@ function MapListElementsToGalleryModel(extractedLists: Element[]): ExtractedInfo
         infoForGallery.ListRootElement = list;
 
         for (const listItem of list.children) {
-            var imgOrLink = listItem.firstElementChild;
+            var imgLink = listItem.firstElementChild;
 
-
-            if (imgOrLink.tagName === "IMG") {
-                let img = imgOrLink as HTMLImageElement;
+            if (imgLink.tagName === "IMG") {
+                let img = imgLink as HTMLImageElement;
                 infoForGallery.Images.push({
                     src: img.src,
                     caption: img.alt ? img.alt : null
                 });
-                continue;
-            }
-
-            if (imgOrLink.tagName === "A") {
-                let a = imgOrLink as HTMLAnchorElement;
-                infoForGallery.Images.push({
-                    src: a.href,
-                    caption: null
-                });
-                continue;
             }
         }
 
