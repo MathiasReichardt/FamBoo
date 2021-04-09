@@ -20,6 +20,7 @@ This theme was built to produce a easy to maintain and use personal wiki and fam
 
 - images are reduced in size but have zoom on click
 - transform list of images to gallery with zoom on click
+  - lists may **only** contain images
 - add author and keywords from front matter to top (not searchable!)
 - transform links to audio player (if link ends with):
   - `.mp3`
