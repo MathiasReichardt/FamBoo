@@ -23,7 +23,7 @@ See: [Navigation and Sorting](http://daux.io/Features/Navigation_and_Sorting.htm
 
 ## Gallery
 
-Images which are on a list, ordered or unordered will be put in a gallery
+Unordererd lists which only contain Images will be put in a gallery:
 
 ```markdown
 - ![Flower 1](flower.jpg)
@@ -69,5 +69,4 @@ author: Me as Iam
 ---
 ```
 
-- date is not shown
-
+- date (by Daux) is not shown
