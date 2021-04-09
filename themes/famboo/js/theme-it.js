@@ -30,8 +30,8 @@ function addKeywords() {
     content.append(`<div class=".keywords-container">${keywordElements}</div>`);
 }
 function replaceVideoLinks() {
-    // get all a tags
-    let links = document.querySelectorAll('a');
+    // get all a tags in content area
+    let links = document.querySelectorAll('.s-content a');
     // loop over links variable to get href for each
     for (const link of links) {
         if (isVideo(link.href)) {
@@ -51,8 +51,8 @@ function replaceVideoLinks() {
     }
 }
 function replaceAudioLinks() {
-    // get all a tags
-    let links = document.querySelectorAll('a');
+    // get all a tags in content area
+    let links = document.querySelectorAll('.s-content a');
     // loop over links variable to get href for each
     for (const link of links) {
         if (isAudio(link.href)) {
