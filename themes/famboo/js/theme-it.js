@@ -1,4 +1,4 @@
-$(document).ready(onPageLoad);
+jQuery(onPageLoad);
 function onPageLoad() {
     TransformListsToGallerys();
     replaceVideoLinks();

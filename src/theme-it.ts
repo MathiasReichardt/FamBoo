@@ -1,4 +1,4 @@
-$(document).ready(onPageLoad);
+jQuery(onPageLoad);
 
 declare function imgzoom(img_or_ev:any): void;
 
