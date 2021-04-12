@@ -14,6 +14,11 @@ function addAuthor() {
     let author = document.querySelector('meta[name="author"]');
     if (!author || !author.content)
         return;
+    // remove default author from daux.io so no author is shown if none specified
+    if (author.content === "I, Me & Myself") {
+        document.removeChild(author);
+        return;
+    }
     var content = $("div.Page__header");
     content.append(`<span class="author">${author.content}</span>`);
 }
