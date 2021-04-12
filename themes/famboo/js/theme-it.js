@@ -16,7 +16,7 @@ function addAuthor() {
         return;
     // remove default author from daux.io so no author is shown if none specified
     if (author.content === "I, Me & Myself") {
-        document.removeChild(author);
+        author.remove();
         return;
     }
     var content = $("div.Page__header");
