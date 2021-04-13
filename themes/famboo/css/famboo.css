@@ -21,6 +21,9 @@
     color: grey;
     opacity: 1.0;
     border-radius: 50%;
+    border-color: grey;
+    border-style: solid;
+    padding: 2px;
 }
 
 .gallery-button:hover:not(:disabled) {

@@ -231,10 +231,7 @@
 	}
 
 	var createNavigationButton = function (arrowSvgElement) {
-		var button = document.createElement("input");
-		button.type = "button";
-		button.value = "";
-		button.setAttribute("type", "image");
+		var button = document.createElement("button");
 		button.className = 'gallery-button';
 		button.style.position = 'absolute';
 		button.style.zIndex = '5001';
@@ -243,18 +240,23 @@
 	}
 
 	var createArrowSvg = function (direction) {
-		var svgURI = 'http://www.w3.org/2000/svg';
-		var svg = document.createElementNS(svgURI, 'svg');
+		var svgNamespace = 'http://www.w3.org/2000/svg';
+		
+		var svg = document.createElementNS(svgNamespace, 'svg');
 		svg.setAttribute('viewBox', '0 0 100 100');
-		var path = document.createElementNS(svgURI, 'path');
+		svg.setAttribute('xmlns', svgNamespace);
+		
+		var path = document.createElementNS(svgNamespace, 'path');
 		path.setAttribute('d', 'M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z');
+		path.setAttribute('xmlns', svgNamespace);
+		path.setAttribute('class', 'arrow');
+
 		if (direction === "left") {
 			path.setAttribute('transform', 'translate(15,0)');
 		} else if (direction === "rigth") {
 			path.setAttribute('transform', 'translate(85,100) rotate(180)');
 		}
-		
-		path.setAttribute('class', 'arrow');
+				
 		svg.appendChild(path);
 		return svg;
 	}
