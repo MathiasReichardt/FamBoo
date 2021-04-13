@@ -1,4 +1,4 @@
-$tag = "1.0"
+$tag = "1.1"
 
 docker build . -t reimat/daux-famboo:$tag
 if ($?) {
